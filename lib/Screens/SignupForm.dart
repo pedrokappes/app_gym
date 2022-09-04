@@ -39,7 +39,6 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.person),
                       hintText: 'Nome Completo',
                       fillColor: Colors.grey[200],
                       filled: true,
@@ -48,7 +47,7 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
                   child: TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
@@ -60,7 +59,6 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.person),
                       hintText: 'Cpf',
                       fillColor: Colors.grey[200],
                       filled: true,
@@ -69,10 +67,9 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
                   child: TextFormField(
                     keyboardType: TextInputType.number,
-                    obscureText: true,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -82,7 +79,6 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.lock),
                       hintText: 'Altura',
                       fillColor: Colors.grey[200],
                       filled: true,
@@ -91,10 +87,9 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
                   child: TextFormField(
                     keyboardType: TextInputType.number,
-                    obscureText: true,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -104,7 +99,6 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.lock),
                       hintText: 'Peso',
                       fillColor: Colors.grey[200],
                       filled: true,
@@ -113,10 +107,9 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
+                    keyboardType: TextInputType.datetime,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -126,7 +119,6 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.lock),
                       hintText: 'Idade',
                       fillColor: Colors.grey[200],
                       filled: true,
@@ -135,7 +127,7 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -147,8 +139,7 @@ class _SignupFormState extends State<SignupForm> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         borderSide: BorderSide(color: Colors.purple),
                       ),
-                      prefixIcon: Icon(Icons.lock),
-                      hintText: 'Password',
+                      hintText: 'Senha',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),

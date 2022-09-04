@@ -1,3 +1,4 @@
+import 'package:app_maromba/Screens/HomePage.dart';
 import 'package:app_maromba/Screens/SignupForm.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,7 @@ class _LoginFormState extends State<LoginForm> {
                         borderSide: BorderSide(color: Colors.purple),
                       ),
                       prefixIcon: Icon(Icons.lock),
-                      hintText: 'Password',
+                      hintText: 'Senha',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),
@@ -84,7 +85,10 @@ class _LoginFormState extends State<LoginForm> {
                       'Login',
                       style: TextStyle(color: Colors.black),
                     ),
-                    onPressed: (){ },
+                    onPressed: (){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => HomePage()));
+                    },
                   ),
                   decoration: BoxDecoration(
                     color: Colors.purple[200],
