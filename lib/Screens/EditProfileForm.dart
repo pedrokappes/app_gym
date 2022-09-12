@@ -1,4 +1,4 @@
-import 'package:app_maromba/Screens/LoginForm.dart';
+import 'package:app_maromba/Screens/LoginAndRegister/LoginForm.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileForm extends StatefulWidget {

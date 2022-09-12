@@ -1,12 +1,8 @@
-import 'package:app_maromba/Screens/AvFisica.dart';
-import 'package:app_maromba/Screens/Dieta.dart';
-import 'package:app_maromba/Screens/LoginForm.dart';
-import 'package:app_maromba/Screens/Perfil.dart';
-import 'package:app_maromba/Screens/SignupForm.dart';
-import 'package:app_maromba/Screens/Treinos.dart';
+import 'package:app_maromba/Screens/HomePage/AvFisica.dart';
+import 'package:app_maromba/Screens/HomePage/Dieta.dart';
+import 'package:app_maromba/Screens/HomePage/Perfil.dart';
+import 'package:app_maromba/Screens/HomePage/Treinos.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:app_maromba/Screens/EditProfileForm.dart';
 import 'package:app_maromba/Screens/ChangePasswordForm.dart';
 
 class HomePage extends StatefulWidget {
@@ -273,3 +269,5 @@ class MyMenu_4 extends StatelessWidget {
     );
   }
 }
+
+

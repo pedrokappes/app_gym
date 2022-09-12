@@ -1,5 +1,5 @@
-import 'package:app_maromba/Screens/HomePage.dart';
-import 'package:app_maromba/Screens/SignupForm.dart';
+import 'package:app_maromba/Screens/HomePage/HomePage.dart';
+import 'package:app_maromba/Screens/LoginAndRegister/SignupForm.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
