@@ -1,9 +1,9 @@
+import 'package:app_maromba/Screens/LoginAndRegister/EditProfileForm.dart';
 import 'package:app_maromba/Screens/HomePage/AvFisica.dart';
-import 'package:app_maromba/Screens/HomePage/Dieta.dart';
-import 'package:app_maromba/Screens/HomePage/Perfil.dart';
+import 'package:app_maromba/Screens/HomePage/DietList.dart';
 import 'package:app_maromba/Screens/HomePage/Treinos.dart';
 import 'package:flutter/material.dart';
-import 'package:app_maromba/Screens/ChangePasswordForm.dart';
+import 'package:app_maromba/Screens/LoginAndRegister/ChangePasswordForm.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -124,7 +124,7 @@ class MyMenu_1 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Perfil()));
+              context, MaterialPageRoute(builder: (context) => EditProfileForm()));
           // Navigator.push(context,
           //     MaterialPageRoute(builder: (_) => LoginForm())),
         },
@@ -204,7 +204,7 @@ class MyMenu_3 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Dieta()));
+              context, MaterialPageRoute(builder: (context) => Dietlist()));
           // Navigator.push(context,
           //     MaterialPageRoute(builder: (_) => LoginForm())),
         },
