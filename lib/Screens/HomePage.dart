@@ -2,9 +2,12 @@ import 'package:app_maromba/Screens/AvFisica.dart';
 import 'package:app_maromba/Screens/Dieta.dart';
 import 'package:app_maromba/Screens/LoginForm.dart';
 import 'package:app_maromba/Screens/Perfil.dart';
+import 'package:app_maromba/Screens/SignupForm.dart';
 import 'package:app_maromba/Screens/Treinos.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:app_maromba/Screens/EditProfileForm.dart';
+import 'package:app_maromba/Screens/ChangePasswordForm.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,157 +19,256 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomePage'),
+        title: Text('App Maromba'),
       ),
       body: Stack(
         children: <Widget>[
           SafeArea(
               child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      height: 64,
-                      child: Row(
+            padding: EdgeInsets.only(top: 48.0, left: 28),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 70,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      CircleAvatar(
+                          radius: 42,
+                          backgroundImage: NetworkImage(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLZal2ngrRXdEebFSXKENv_Joj38zpGXhwA&usqp=CAU')),
+                      SizedBox(
+                        width: 48,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          CircleAvatar(
-                              radius: 32,
-                              backgroundImage: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLZal2ngrRXdEebFSXKENv_Joj38zpGXhwA&usqp=CAU')),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Seja bem vindo Pedro'),
-                              FlatButton(
-                                  textColor: Colors.purple,
-                                  child: Text('Acessar Perfil!'),
-                                  onPressed: () {}),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Container(
-            padding: EdgeInsets.all(35),
-            child: GridView.count(
-              crossAxisCount: 2,
-              children: <Widget>[
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Perfil()));
-                      ;
-                    },
-                    splashColor: Colors.purple,
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(
-                            Icons.person,
-                            size: 70,
-                            color: Colors.purple,
-                          ),
                           Text(
-                            "Perfil",
-                            style: new TextStyle(fontSize: 17),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Treinos()));
-                      ;
-                    },
-                    splashColor: Colors.purple,
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(
-                            Icons.center_focus_strong,
-                            size: 70,
-                            color: Colors.purple,
+                            'Seja bem vindo, Pedro!',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
                           ),
-                          Text(
-                            "Treinos",
-                            style: new TextStyle(fontSize: 17),
-                          )
+                          FlatButton(
+                              textColor: Colors.purple,
+                              child: Text(
+                                '    Alterar Senha',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ChangePasswordForm()));
+                                // Navigator.push(context,
+                                //     MaterialPageRoute(builder: (_) => LoginForm())),
+                              }),
                         ],
-                      ),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Dieta()));
-                      ;
-                    },
-                    splashColor: Colors.purple,
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(
-                            Icons.no_food,
-                            size: 70,
-                            color: Colors.purple,
-                          ),
-                          Text(
-                            "Dieta",
-                            style: new TextStyle(fontSize: 17),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => AvFisica()));
-                      ;
-                    },
-                    splashColor: Colors.purple,
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(
-                            Icons.graphic_eq,
-                            size: 70,
-                            color: Colors.purple,
-                          ),
-                          Text(
-                            "Avaliação fisica",
-                            style: new TextStyle(fontSize: 17),
-                          )
-                        ],
-                      ),
-                    ),
+                      )
+                    ],
                   ),
                 ),
               ],
             ),
+          )),
+          Padding(
+            padding: EdgeInsets.only(top: 150.0),
+            child: Center(
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  children: <Widget>[
+                    MyMenu_1(
+                      title: "Perfil",
+                      icon: Icons.person,
+                      warna: Colors.purple,
+                    ),
+                    MyMenu_2(
+                      title: "Treinos",
+                      icon: Icons.center_focus_strong,
+                      warna: Colors.purple,
+                    ),
+                    MyMenu_3(
+                      title: "Dieta",
+                      icon: Icons.no_food,
+                      warna: Colors.purple,
+                    ),
+                    MyMenu_4(
+                      title: "Avaliação fisica",
+                      icon: Icons.graphic_eq,
+                      warna: Colors.purple,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class MyMenu_1 extends StatelessWidget {
+  MyMenu_1({required this.title, required this.icon, required this.warna});
+
+  final String title;
+  final IconData icon;
+  final MaterialColor warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.deepPurple[50],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Perfil()));
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (_) => LoginForm())),
+        },
+        splashColor: Colors.purple,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                icon,
+                size: 70,
+                color: warna,
+              ),
+              Text(
+                title,
+                style: new TextStyle(fontSize: 17),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyMenu_2 extends StatelessWidget {
+  MyMenu_2({required this.title, required this.icon, required this.warna});
+
+  final String title;
+  final IconData icon;
+  final MaterialColor warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.deepPurple[50],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Treinos()));
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (_) => LoginForm())),
+        },
+        splashColor: Colors.purple,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                icon,
+                size: 70,
+                color: warna,
+              ),
+              Text(
+                title,
+                style: new TextStyle(fontSize: 17),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyMenu_3 extends StatelessWidget {
+  MyMenu_3({required this.title, required this.icon, required this.warna});
+
+  final String title;
+  final IconData icon;
+  final MaterialColor warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.deepPurple[50],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Dieta()));
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (_) => LoginForm())),
+        },
+        splashColor: Colors.purple,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                icon,
+                size: 70,
+                color: warna,
+              ),
+              Text(
+                title,
+                style: new TextStyle(fontSize: 17),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyMenu_4 extends StatelessWidget {
+  MyMenu_4({required this.title, required this.icon, required this.warna});
+
+  final String title;
+  final IconData icon;
+  final MaterialColor warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.deepPurple[50],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AvFisica()));
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (_) => LoginForm())),
+        },
+        splashColor: Colors.purple,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                icon,
+                size: 70,
+                color: warna,
+              ),
+              Text(
+                title,
+                style: new TextStyle(fontSize: 17),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
