@@ -75,7 +75,7 @@ class _DietlistState extends State<Dietlist> {
                   Card(
                     child: ListTile(
                       title: Text(_itens[index],
-                      style: TextStyle(color: Colors.deepPurple,
+                      style: TextStyle(color: Colors.red,
                       ),),
                     ),
                   );
