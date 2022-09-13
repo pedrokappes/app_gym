@@ -49,7 +49,7 @@ class _LoginFormState extends State<LoginForm> {
                         borderSide: BorderSide(color: Colors.purple),
                       ),
                       prefixIcon: Icon(Icons.person),
-                      hintText: 'Cpf',
+                      hintText: 'CPF',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),
