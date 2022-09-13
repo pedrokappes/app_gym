@@ -52,7 +52,6 @@ class _AvFisicaState extends State<AvFisica> {
               margin: EdgeInsets.all(4),
               elevation: 8,
               child: ListTile(
-                
                 title: Text(
                   avaliacoesList[index].data,
                   style: TextStyle(
@@ -61,10 +60,10 @@ class _AvFisicaState extends State<AvFisica> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                subtitle: Text(
+                trailing: Text(
                   avaliacoesList[index].peso,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 14,
                     color: Colors.purpleAccent,
                     fontWeight: FontWeight.w400,
                   ),
