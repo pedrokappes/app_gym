@@ -148,7 +148,8 @@ class _SignupFormState extends State<SignupForm> {
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
-                  child: FlatButton(
+                  //TROCADA  FlatButton -> TextButton
+                  child: TextButton(
                     child: Text(
                       'Cadastrar',
                       style: TextStyle(color: Colors.black),
@@ -167,9 +168,10 @@ class _SignupFormState extends State<SignupForm> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Já tem uma conta?'),
-                      FlatButton(
-                        textColor: Colors.purple,
-                        child: Text('Fazer login!'),
+                      TextButton(
+                        //TROCADA  FlatButton -> TextButton
+                        // textColor: Colors.purple,
+                        child: Text('Fazer login!', style: TextStyle(color: Colors.purple),),
                         onPressed: (){
                           Navigator.push(context,
                               MaterialPageRoute(builder: (_) => LoginForm()));

@@ -80,7 +80,8 @@ class _LoginFormState extends State<LoginForm> {
                   margin: EdgeInsets.all(30.0),
 
                   width: double.infinity,
-                  child: FlatButton(
+                  //TROCADA  FlatButton -> TextButton
+                  child: TextButton(
                     child: Text(
                       'Login',
                       style: TextStyle(color: Colors.black),
@@ -102,9 +103,10 @@ class _LoginFormState extends State<LoginForm> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Não tem uma conta?'),
-                      FlatButton(
-                        textColor: Colors.purple,
-                        child: Text('Criar conta!'),
+                    //TROCADA  FlatButton -> TextButton
+                      TextButton(
+                        //textColor: Colors.purple,
+                        child: Text('Criar conta!', style: TextStyle( color: Colors.purple),),
                         onPressed: (){
                           Navigator.push(context,
                               MaterialPageRoute(builder: (_) => SignupForm()));

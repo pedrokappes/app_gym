@@ -135,7 +135,8 @@ class _ChangePasswordFormState extends State<ChangePasswordForm> {
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
-                  child: FlatButton(
+                  //TROCADA  FlatButton -> TextButton
+                  child: TextButton(
                     child: Text(
                       'Definir',
                       style: TextStyle(color: Colors.black, fontSize: 15),

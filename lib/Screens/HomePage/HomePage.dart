@@ -46,11 +46,13 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 16,
                             ),
                           ),
-                          FlatButton(
-                              textColor: Colors.purple,
+                          //TROCADA  FlatButton -> TextButton
+                          TextButton(
+                              //textColor: Colors.purple,
                               child: Text(
                                 '    Alterar Senha',
                                 style: TextStyle(
+                                  color: Colors.purple,
                                   fontSize: 16,
                                 ),
                               ),

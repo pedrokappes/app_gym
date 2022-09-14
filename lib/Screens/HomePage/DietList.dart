@@ -48,8 +48,10 @@ class _DietlistState extends State<Dietlist> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton(
-                      color: Colors.deepPurple[50],
+                //TROCADA  FlatButton -> TextButton
+                  
+                  child: TextButton(
+                      //color: Colors.deepPurple[50],
                       child: Text('Adicionar',
                       style:
                       TextStyle(color: Colors.deepPurple)),
