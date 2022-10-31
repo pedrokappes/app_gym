@@ -1,6 +1,8 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace, camel_case_types, prefer_const_constructors_in_immutables, unnecessary_new, file_names
+
 import 'package:app_maromba/Screens/LoginAndRegister/EditProfileForm.dart';
-import 'package:app_maromba/Screens/HomePage/AvFisica.dart';
-import 'package:app_maromba/Screens/HomePage/DietList.dart';
+import 'package:app_maromba/views/avaliacao_view/avaliacao_view.dart';
+import 'package:app_maromba/views/dieta_view.dart';
 import 'package:app_maromba/Screens/HomePage/TrainingList.dart';
 import 'package:flutter/material.dart';
 import 'package:app_maromba/Screens/LoginAndRegister/ChangePasswordForm.dart';
@@ -14,11 +16,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //BARRA DE NAVEGACAO HOME
       appBar: AppBar(
         title: Text('App Maromba'),
       ),
+      //CORPO HOME
       body: Stack(
         children: <Widget>[
+          //HOME SUPERIOR
           SafeArea(
               child: Padding(
             padding: EdgeInsets.only(top: 48.0, left: 28),
@@ -29,6 +34,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                      //IMAGEM RETIRADA DA INTERNET
                       CircleAvatar(
                           radius: 42,
                           backgroundImage: NetworkImage(
@@ -36,6 +42,7 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         width: 48,
                       ),
+                      //FRASE AO LADO DA IMAGEM
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,9 +53,8 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 16,
                             ),
                           ),
-                          //TROCADA  FlatButton -> TextButton
+                          ///BOTAO QUE LEVA A A TELA DE ALTERAR SENHA
                           TextButton(
-                              //textColor: Colors.purple,
                               child: Text(
                                 '    Alterar Senha',
                                 style: TextStyle(
@@ -62,8 +68,6 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) =>
                                             ChangePasswordForm()));
-                                // Navigator.push(context,
-                                //     MaterialPageRoute(builder: (_) => LoginForm())),
                               }),
                         ],
                       )
@@ -73,6 +77,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           )),
+          //HOME INFEIROR
           Padding(
             padding: EdgeInsets.only(top: 150.0),
             child: Center(
@@ -80,6 +85,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.all(20),
                 child: GridView.count(
                   crossAxisCount: 2,
+                  //LISTA DE BOTOES QUE LEVAM A TELAS
                   children: <Widget>[
                     MyMenu_1(
                       title: "Perfil",
@@ -112,6 +118,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+//BOTAO TELA PERFIL
 class MyMenu_1 extends StatelessWidget {
   MyMenu_1({required this.title, required this.icon, required this.warna});
 
@@ -127,8 +134,6 @@ class MyMenu_1 extends StatelessWidget {
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => EditProfileForm()));
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (_) => LoginForm())),
         },
         splashColor: Colors.purple,
         child: Center(
@@ -152,6 +157,7 @@ class MyMenu_1 extends StatelessWidget {
   }
 }
 
+//BOTAO TELA TREINOS
 class MyMenu_2 extends StatelessWidget {
   MyMenu_2({required this.title, required this.icon, required this.warna});
 
@@ -167,8 +173,6 @@ class MyMenu_2 extends StatelessWidget {
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => TrainingList()));
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (_) => LoginForm())),
         },
         splashColor: Colors.purple,
         child: Center(
@@ -192,6 +196,7 @@ class MyMenu_2 extends StatelessWidget {
   }
 }
 
+//BOTAO TELA DIETA
 class MyMenu_3 extends StatelessWidget {
   MyMenu_3({required this.title, required this.icon, required this.warna});
 
@@ -206,9 +211,7 @@ class MyMenu_3 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Dietlist()));
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (_) => LoginForm())),
+              context, MaterialPageRoute(builder: (context) => DietaPage()));
         },
         splashColor: Colors.purple,
         child: Center(
@@ -232,6 +235,7 @@ class MyMenu_3 extends StatelessWidget {
   }
 }
 
+//BOTAO TELA AVALIACOES
 class MyMenu_4 extends StatelessWidget {
   MyMenu_4({required this.title, required this.icon, required this.warna});
 
@@ -246,9 +250,7 @@ class MyMenu_4 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AvFisica()));
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (_) => LoginForm())),
+              context, MaterialPageRoute(builder: (context) => AvaliacaoPage()));
         },
         splashColor: Colors.purple,
         child: Center(
